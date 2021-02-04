@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://unpkg.com/vue@next"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue3</title>
 </head>
+
 <body>
-    <h3>hello world!!</h3>
-    <h2>javascript</h2>
-    <h1>to</h1>
+    <div id="app">
+        Counter: {{ message }}
+        number:{{ price * num}}
+    </div>
 </body>
+<script>
+    const vm = Vue.createApp({
+        data() {
+            return {
+                message: 'hello Vue 3.0!',
+                price: 20,
+                num:10
+            }
+        }
+    });
+
+    vm.mount('#app');
+</script>
+
 </html>
